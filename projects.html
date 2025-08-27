@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Our Projects | Commit Group</title>
+  <meta name="description" content="コミットグループは、医療・スポーツ・文化・ライフスタイルの領域で社会価値の創出をめざすグループです。" />
+  <link rel="stylesheet" href="lib/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+  <script src="lib/modernizr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script>imageMapResize();</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="home blog">
+<!-- Splash (once per day) -->
+<div id="splash" class="splash" aria-hidden="true">
+  <div class="splash__inner">
+    <div class="splash__logo" aria-label="COMMIT GROUP">
+      <svg><use xlink:href="#logo"></use></svg>
+    </div>
+  </div>
+</div>
+
+  <!-- ===== SVG Sprite（ロゴ/アイコン） ===== -->
+  <div id="svg-sprite" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <!-- 中央寄せ版 -->
+      <symbol id="logo" viewBox="0 0 2400 360" overflow="visible" preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(1200,180)">
+          <text
+            text-anchor="middle"
+            dominant-baseline="middle"
+            font-family="'Arial Black', sans-serif"
+            font-size="260"
+            fill="currentColor"
+            style="letter-spacing:.04em"
+          >COMMIT GROUP</text>
+        </g>
+      </symbol>
+      <symbol id="icon-next" viewBox="0 0 10 10">
+        <path d="M7.7,4.4 3.5,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l3.5,3.5L2.4,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/>
+      </symbol>
+      <symbol id="icon-prev" viewBox="0 0 10 10">
+        <path d="M2.3,5.6l4.2,4.2c.3.3.8.3 1.1,0 .3-.3.3-.8 0-1.2L4.1,5.1 7.6,1.4c.3-.3.3-.8 0-1.2s-.8-.3-1.1,0L2.4,4.4c-.2.2-.3.4-.3.6s.1.4.2.6z"/>
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 13 10">
+        <path d="M12.8,4.4 8.6,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l2.8,2.8H.8C.4,4.2,0,4.5,0,5s.4.8.8.8h9.4L7.5,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/>
+      </symbol>
+    </svg>
+  </div>
+
+  <!-- ===== Header（添付HTMLと同構造） ===== -->
+  <header class="is-bgcover">
+    <div class="section-inner">
+      <a href="#" class="logo"><svg><use xlink:href="#logo"></use></svg></a>
+      <div class="NavHolder">
+        <nav class="mainNav">
+          <ul class="navlist">
+            <li class="n_home"><a href="index.html"><span>Home</span></a></li>
+            <li class="n_about drop"><a href="#"><span>About us</span><svg><use xlink:href="#icon-next"></use></svg></a>
+              <ul>
+                <li><a href="message.html"><span>Message</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="company.html"><span>Our Company</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="history.html"><span>Our History</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+              </ul>
+            </li>
+            <li class="n_project"><a href="projects.html"><span>Projects</span></a></li>
+            <li class="n_news"><a href="news.html"><span>News</span></a></li>
+            <li class="n_contact"><a href="contact.html"><span>Contact</span></a></li>
+          </ul>
+          <ul class="navlist">
+            <li class="n_recruit"><a href="#" target="_blank"><span>Recruit<svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg></span></a></li>
+          </ul>
+          <ul class="lang">
+            <li><a href="#">Eng</a></li>
+            <li><a class="active" href="#">Jpn</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="nav-trigger">
+        <div class="hamburger">
+          <div class="line"><span></span></div>
+          <div class="line"><span></span></div>
+          <div class="line"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="header-after"></div>
+
+  <section class="OW ourbusiness">
+    <div class="section-inner">
+      <div id="breadcrumb">
+        <a href="index.html">Home</a>
+        <div class="sepa">
+        </div>
+        <span>Our Projects</span>
+      </div>
+    </div>
+
+    <div class="section-inner title-col">
+        <div class="sec-text">
+            <h1 class="serif c24">Our Projects</h1>
+        </div>
+    </div>
+
+    <div class="section-inner">
+      <div class="search">    
+          <span class="search_item is-active" data-group="">ALL</span>
+          <span class="search_item" data-group="watch">#時計</span>
+          <span class="search_item" data-group="dent">#歯科</span>
+          <span class="search_item" data-group="sport">#スポーツ</span>
+          <span class="search_item" data-group="rest">#飲食／花</span>
+      </div>
+      <div class="scrolldown4"><span></span></div>
+    </div>
+    <style>.second-c{font-size:0.8em !important; text-transform: uppercase; color: #888;}</style>
+
+    <div class="section-inner wide" id="projects">
+      <div class="archives-sec">
+        <div class="cf">
+          <div class="list">
+            <div class="col border list_item" data-group="watch" id="hven">
+              <a data-target="pj3" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/commitginza.jpg" src="img/projects/commitginza.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>COMMIT GINZA</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="pj1" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/hisakashika.jpg" src="img/projects/hisakashika.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>日坂歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="gp21" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/otemachi.jpg" src="img/projects/otemachi.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>東京大手町歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="gp20" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/motomachi_dental.jpg" src="img/projects/motomachi_dental.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>東京元町中華街歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="pj2" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/hamamatsutyo.jpg" src="img/projects/hamamatsutyo.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>東京浜松町歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="pj2" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/akihabara.jpg" src="img/projects/akihabara.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>秋葉原UDX歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="pj2" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/kudanshita.jpg" src="img/projects/kudanshita.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>九段下駅前歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="pj2" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/takeshiba.jpg" src="img/projects/takeshiba.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>東京ポートシティ竹芝歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="pj2" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/terasumoll.jpg" src="img/projects/terasumoll.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>テラスモール歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="dent">
+              <a data-target="pj2" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/shiodome.jpg" src="img/projects/shiodome.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>東京汐留歯科クリニック</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="sport">
+              <a data-target="gp02" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/sperio.jpg" src="img/projects/sperio.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>SPERIO</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="sport">
+              <a data-target="wed02" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/sperio_ladys.jpg" src="img/projects/sperio_ladys.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>SPERIO LADYS</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="rest">
+              <a data-target="wed02" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/nou.jpg" src="img/projects/nou.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>NOU</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="rest">
+              <a data-target="wed02" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/iro.jpg" src="img/projects/iro.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>IRO</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="rest">
+              <a data-target="wed02" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/kiso.jpg" src="img/projects/kiso.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>KISO</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+            <div class="col border list_item" data-group="rest">
+              <a data-target="wed02" class="modal-open">
+                <div class="img show">
+                  <img class="lazyload" data-src="img/projects/aiflower.jpg" src="img/projects/aiflower.jpg">
+                </div>
+                <div class="text">
+                  <h4>
+                    <strong>AI.FLOWER</strong>
+                  </h4>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer（アプリブロックは以前の要望に合わせ非表示） ===== -->
+  <footer id="contact">
+    <div class="section-inner">
+      <a href="#" class="logo salt"><svg><use xlink:href="#logo"></use></svg></a>
+      <!-- アプリ誘導ブロック（必要なら以下を有効化）
+      <a href="#" class="app-link" target="_blank">
+        <div class="app_wrapper">
+          <div class="applogo_wrapper"><img src="https://salt-group.jp/wp2017/wp-content/themes/salt-group/img/home/app_logo.png" alt="app"></div>
+          <div class="apptext_wrapper"><p>Explore the SALT App</p></div>
+        </div>
+        <svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg>
+      </a>-->
+      <div class="foot-bottom cf">
+        <ul class="info">
+          <li><a class="hajime" href="index.html"><div>HOME</div></a></li>
+          <li><a href="message.html"><div>MESSAGE</div></a></li>
+          <li><a href="company.html"><div>OUR COMPANY</div></a></li>
+          <li><a href="history.html"><div>OUR HISTORY</div></a></li>
+          <li><a href="projects.html"><div>PROJECTS</div></a></li>
+          <li><a href="news.html"><div>NEWS</div></a></li>
+          <li><a href="contact.html"><div>CONTACT</div></a></li>
+        </ul>
+      </div>
+      <div class="foot-bottom cf" style="margin-top:10px;">
+        <p class="copy">© <span id="year"></span> Commit Group</p>
+      </div>
+    </div>
+  </footer>
+<!-- ===== Projects Modal ===== -->
+<div class="pj-modal" id="pj-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="pj-modal_backdrop" data-close="true"></div>
+
+  <div class="pj-modal_panel" role="document" aria-labelledby="pj-modal-title">
+    <button class="pj-modal_close" type="button" aria-label="Close" data-close="true">×</button>
+
+    <div class="pj-modal_grid">
+      <div class="pj-modal_text">
+        <h3 id="pj-modal-title" class="serif">TITLE</h3>
+        <p id="pj-modal-desc">DESCRIPTION</p>
+        <a id="pj-modal-link" class="btn-red" href="#" target="_blank" rel="noopener">詳細はこちら →</a>
+      </div>
+
+      <div class="pj-modal_media">
+        <img id="pj-modal-img" src="" alt="">
+        <div class="pj-modal_nav">
+          <button class="pj-prev" type="button" aria-label="Previous">‹</button>
+          <button class="pj-next" type="button" aria-label="Next">›</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+  // 年の自動更新
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== HERO：FlexSliderに一本化 =====
+  $(function(){
+
+  (function(){
+    const KEY = 'COMMIT_GROUP_SPLASH_SHOWN_DATE';
+    const splash = document.getElementById('splash');
+    if(!splash) return;
+
+    // ?splash=1 で強制表示（テスト用）
+    const qp = new URLSearchParams(location.search);
+    const force = qp.get('splash') === '1';
+
+    const d = new Date();
+    const today =
+      d.getFullYear() + '-' +
+      String(d.getMonth()+1).padStart(2,'0') + '-' +
+      String(d.getDate()).padStart(2,'0');
+
+    const last = localStorage.getItem(KEY);
+    const shouldShow = force || (last !== today);
+
+    if(!shouldShow){
+      splash.remove();
+    }else{
+      document.body.classList.add('splash-on');
+      requestAnimationFrame(()=> splash.classList.add('is-in'));
+      const AUTO_CLOSE_MS = 1600;
+      function closeSplash(){
+        splash.classList.add('is-out');
+        setTimeout(()=>{
+          document.body.classList.remove('splash-on');
+          splash.remove();
+        }, 600);
+      }
+      window.addEventListener('load', ()=> setTimeout(closeSplash, AUTO_CLOSE_MS));
+      splash.addEventListener('click', closeSplash);
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeSplash(); });
+      try{ localStorage.setItem(KEY, today); }catch(_){}
+    }
+  })();
+
+    const $hero = $('.hero-slider');          // ← 明確に参照を確保
+    $hero.flexslider({
+      selector: '.slides > li',
+      animation: 'fade',
+      slideshowSpeed: 6000,
+      animationSpeed: 800,
+      controlNav: false,      // ドットは使わない
+      directionNav: false,    // 付属の矢印は使わない（自前SVGを使うため）
+      pauseOnAction: false,
+      pauseOnHover: false
+    });
+
+    // 右下の自前矢印で操作
+    $('.flex-prev').on('click', function(e){ e.preventDefault(); $hero.flexslider('prev'); });
+    $('.flex-next').on('click', function(e){ e.preventDefault(); $hero.flexslider('next'); });
+
+    // ===== スクロールボタン：#content へスムーススクロール =====
+    $('a.scroll-down[href^="#"]').on('click', function(e){
+      const id = $(this).attr('href');
+      const $t = $(id);
+      if(!$t.length) return;
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $t.offset().top }, 600, 'swing');
+    });
+    
+    // 対象を自動マーキング（HTMLを触らずに済む）
+    const markReveal = (selector, perRow = 3, stagger = 80) => {
+      const nodes = Array.from(document.querySelectorAll(selector));
+      nodes.forEach((el, i) => {
+        el.classList.add('reveal');
+        // ちょいステッガー（1行に3枚想定：0ms,80ms,160ms…）
+        const delayMs = (i % perRow) * stagger;
+        el.style.transitionDelay = (delayMs/1000) + 's';
+      });
+    };
+
+    // フェードイン
+    markReveal('body article');
+    
+    const io = new IntersectionObserver((entries, obs)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ===== Our Projects Modal ===== */
+    const cards = Array.from(document.querySelectorAll('#projects .archives-sec .list_item'));
+    // ② フィルター
+    const chips = Array.from(document.querySelectorAll('.search .search_item'));
+    const apply = (key) => {
+      cards.forEach(c => {
+        const g = (c.dataset.group || '').trim();
+        const show = !key || key === 'all' || key === g;   // ALL/空=全表示
+        c.style.display = show ? '' : 'none';
+      });
+    };
+
+    chips.forEach(chip => {
+      chip.setAttribute('role', 'button');
+      chip.setAttribute('tabindex', '0');
+      chip.style.cursor = 'pointer';
+
+      const activate = () => {
+        chips.forEach(x => { x.classList.remove('is-active'); x.setAttribute('aria-selected', 'false'); });
+        chip.classList.add('is-active');
+        chip.setAttribute('aria-selected', 'true');
+        const key = (chip.dataset.group || '').trim();
+        apply(key === '' ? 'all' : key);
+      };
+
+      chip.addEventListener('click', activate);
+      chip.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+    });
+
+    // 初期表示：.is-active（ALL）を適用
+    (document.querySelector('.search .search_item.is-active') || chips[0])?.click();
+
+    if(!cards.length) return;
+
+    // クリックターゲット（a.modal-open が無ければ .list_item 全体で拾う）
+    const targets = cards.map(c => c.querySelector('a.modal-open') || c);
+
+    const modal   = document.getElementById('pj-modal');
+    const titleEl = document.getElementById('pj-modal-title');
+    const descEl  = document.getElementById('pj-modal-desc');
+    const imgEl   = document.getElementById('pj-modal-img');
+    const linkEl  = document.getElementById('pj-modal-link');
+
+    let idx = 0;
+
+    function readCard(i){
+      const card = cards[i];
+      const a    = card.querySelector('a.modal-open') || card;
+      const title= (card.querySelector('.text h4')?.textContent || a.getAttribute('data-title') || 'Project').trim();
+      const desc = a.getAttribute('data-desc') || '（説明文を data-desc で設定できます）';
+      const link = a.getAttribute('data-link') || '#';
+      const img  = card.querySelector('.img img')?.src || '';
+
+      return { title, desc, link, img };
+    }
+
+    function open(i){
+      idx = (i + cards.length) % cards.length;
+      const {title, desc, link, img} = readCard(idx);
+      titleEl.textContent = title;
+      descEl.textContent  = desc;
+      linkEl.href = link;
+      imgEl.src   = img;
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      trapFocus();
+    }
+
+    function close(){
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+
+    // Event bindings
+    targets.forEach((el, i)=>{
+      el.addEventListener('click', (e)=>{
+        e.preventDefault(); open(i);
+      });
+    });
+
+    modal.addEventListener('click', (e)=>{
+      if(e.target.dataset.close === 'true') close();
+    });
+    modal.querySelector('.pj-prev').addEventListener('click', ()=> open(idx-1));
+    modal.querySelector('.pj-next').addEventListener('click', ()=> open(idx+1));
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+
+    // Focus trap（タブ移動がモーダルから出ないように）
+    function trapFocus(){
+      const focusables = modal.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"])');
+      const first = focusables[0], last = focusables[focusables.length - 1];
+      first?.focus();
+      function loop(e){
+        if(e.key !== 'Tab') return;
+        if(e.shiftKey && document.activeElement === first){ last.focus(); e.preventDefault(); }
+        else if(!e.shiftKey && document.activeElement === last){ first.focus(); e.preventDefault(); }
+      }
+      modal.addEventListener('keydown', loop, { once:true });
+    }
+
+    navInit();
+  });
+function navInit() {
+    $('.nav-trigger').on('click', function (e) {
+        $('body').toggleClass('show');
+        e.preventDefault();
+    });
+    $('.sb-search .open').on('click', function (e) {
+        $('.sb-search').addClass('is-open');
+        e.preventDefault();
+    });
+    $('.sb-search .close').on('click', function (e) {
+        $('.sb-search').removeClass('is-open');
+        e.preventDefault();
+    });
+
+    $('#social-trigger').on('click', function (e) {
+        $('#socialLinks').toggleClass('show');
+        e.preventDefault();
+    });
+
+    if ($(window).width() > 940) {
+        $('.drop').on('mouseenter', function (e) {
+            $(this).toggleClass('showdrop');
+        });
+        $('.drop').on('mouseleave', function (e) {
+            $(this).removeClass('showdrop');
+        });
+    } else {
+        $('.drop').on('click', function (e) {
+            $(this).toggleClass('showdrop');
+        });
+    }
+    
+};
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Contact us | Commit Group</title>
+  <meta name="description" content="コミットグループは、医療・スポーツ・文化・ライフスタイルの領域で社会価値の創出をめざすグループです。" />
+  <link rel="stylesheet" href="lib/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+  <script src="lib/modernizr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script>imageMapResize();</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="home blog">
+<!-- Splash (once per day) -->
+<div id="splash" class="splash" aria-hidden="true">
+  <div class="splash__inner">
+    <div class="splash__logo" aria-label="COMMIT GROUP">
+      <svg><use xlink:href="#logo"></use></svg>
+    </div>
+  </div>
+</div>
+
+  <!-- ===== SVG Sprite（ロゴ/アイコン） ===== -->
+  <div id="svg-sprite" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <!-- 中央寄せ版 -->
+      <symbol id="logo" viewBox="0 0 2400 360" overflow="visible" preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(1200,180)">
+          <text
+            text-anchor="middle"
+            dominant-baseline="middle"
+            font-family="'Arial Black', sans-serif"
+            font-size="260"
+            fill="currentColor"
+            style="letter-spacing:.04em"
+          >COMMIT GROUP</text>
+        </g>
+      </symbol>
+      <symbol id="icon-next" viewBox="0 0 10 10">
+        <path d="M7.7,4.4 3.5,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l3.5,3.5L2.4,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/>
+      </symbol>
+      <symbol id="icon-prev" viewBox="0 0 10 10">
+        <path d="M2.3,5.6l4.2,4.2c.3.3.8.3 1.1,0 .3-.3.3-.8 0-1.2L4.1,5.1 7.6,1.4c.3-.3.3-.8 0-1.2s-.8-.3-1.1,0L2.4,4.4c-.2.2-.3.4-.3.6s.1.4.2.6z"/>
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 13 10">
+        <path d="M12.8,4.4 8.6,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l2.8,2.8H.8C.4,4.2,0,4.5,0,5s.4.8.8.8h9.4L7.5,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/>
+      </symbol>
+    </svg>
+  </div>
+
+  <!-- ===== Header（添付HTMLと同構造） ===== -->
+  <header class="is-bgcover">
+    <div class="section-inner">
+      <a href="#" class="logo"><svg><use xlink:href="#logo"></use></svg></a>
+      <div class="NavHolder">
+        <nav class="mainNav">
+          <ul class="navlist">
+            <li class="n_home"><a href="index.html"><span>Home</span></a></li>
+            <li class="n_about drop"><a href="#"><span>About us</span><svg><use xlink:href="#icon-next"></use></svg></a>
+              <ul>
+                <li><a href="message.html"><span>Message</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="company.html"><span>Our Company</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="history.html"><span>Our History</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+              </ul>
+            </li>
+            <li class="n_project"><a href="projects.html"><span>Projects</span></a></li>
+            <li class="n_news"><a href="news.html"><span>News</span></a></li>
+            <li class="n_contact"><a href="contact.html"><span>Contact</span></a></li>
+          </ul>
+          <ul class="navlist">
+            <li class="n_recruit"><a href="#" target="_blank"><span>Recruit<svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg></span></a></li>
+          </ul>
+          <ul class="lang">
+            <li><a href="#">Eng</a></li>
+            <li><a class="active" href="#">Jpn</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="nav-trigger">
+        <div class="hamburger">
+          <div class="line"><span></span></div>
+          <div class="line"><span></span></div>
+          <div class="line"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="header-after"></div>
+
+  <section class="bg-lightgray">
+    <div class="section-inner">
+      <div id="breadcrumb">
+        <a href="index.html">Home</a>
+        <div class="sepa">
+        </div>
+        <span>Contact us</span>
+      </div>
+    </div>
+    <div class="hero-a">
+      <div class="img">
+        <img src="img/contact/hero_b.jpg">
+      </div>
+    </div>
+    <div class="section-inner">
+      <div class="title-col">
+        <h1 class="serif">Contact us</h1>
+      </div>
+      <div class="contact-sec">
+        <hr>
+      </div>
+      <div role="form" class="wpcf7" id="wpcf7-f37-p34-o1" lang="ja" dir="ltr">
+        <div class="screen-reader-response" aria-live="polite">
+        </div>
+        <form action="/contact/#wpcf7-f37-p34-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+          <div style="display: none;">
+            <input type="hidden" name="_wpcf7" value="37">
+            <input type="hidden" name="_wpcf7_version" value="5.1.9">
+            <input type="hidden" name="_wpcf7_locale" value="ja">
+            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f37-p34-o1">
+            <input type="hidden" name="_wpcf7_container_post" value="34">
+          </div>
+          <div class="inputarea">
+            <div class="cf">
+              <div class="hafbox">
+                <p>
+                  <span class="wpcf7-form-control-wrap your-name">
+                    <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name">
+                  </span>
+                </p>
+                <p>
+                  <span class="wpcf7-form-control-wrap your-email">
+                    <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email">
+                  </span>
+                </p>
+                <p>
+                  <span class="wpcf7-form-control-wrap your-tel">
+                    <input type="tel" name="your-tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel" aria-invalid="false" placeholder="Your Phone Number">
+                  </span>
+                </p>
+                <p></p>
+              </div>
+              <div class="hafbox">
+                <p>
+                  <span class="wpcf7-form-control-wrap store">
+                    <input type="text" name="store" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Company's Name">
+                  </span>
+                </p>
+                <p>
+                  <span class="wpcf7-form-control-wrap message">
+                    <textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Message">
+                    </textarea>
+                  </span>
+                </p>
+                <p></p>
+              </div>
+              <p></p>
+            </div>
+            <div class="submitarea">
+              <div class="outlinebtn">
+                <input type="submit" value="SEND MESSAGE" class="wpcf7-form-control wpcf7-submit">
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <div class="wpcf7-response-output wpcf7-display-none" aria-hidden="true">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer（アプリブロックは以前の要望に合わせ非表示） ===== -->
+  <footer id="contact">
+    <div class="section-inner">
+      <a href="#" class="logo salt"><svg><use xlink:href="#logo"></use></svg></a>
+      <!-- アプリ誘導ブロック（必要なら以下を有効化）
+      <a href="#" class="app-link" target="_blank">
+        <div class="app_wrapper">
+          <div class="applogo_wrapper"><img src="https://salt-group.jp/wp2017/wp-content/themes/salt-group/img/home/app_logo.png" alt="app"></div>
+          <div class="apptext_wrapper"><p>Explore the SALT App</p></div>
+        </div>
+        <svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg>
+      </a>-->
+      <div class="foot-bottom cf">
+        <ul class="info">
+          <li><a class="hajime" href="index.html"><div>HOME</div></a></li>
+          <li><a href="message.html"><div>MESSAGE</div></a></li>
+          <li><a href="company.html"><div>OUR COMPANY</div></a></li>
+          <li><a href="history.html"><div>OUR HISTORY</div></a></li>
+          <li><a href="projects.html"><div>PROJECTS</div></a></li>
+          <li><a href="news.html"><div>NEWS</div></a></li>
+          <li><a href="contact.html"><div>CONTACT</div></a></li>
+        </ul>
+      </div>
+      <div class="foot-bottom cf" style="margin-top:10px;">
+        <p class="copy">© <span id="year"></span> Commit Group</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // 年の自動更新
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== HERO：FlexSliderに一本化 =====
+  $(function(){
+
+  (function(){
+    const KEY = 'COMMIT_GROUP_SPLASH_SHOWN_DATE';
+    const splash = document.getElementById('splash');
+    if(!splash) return;
+
+    // ?splash=1 で強制表示（テスト用）
+    const qp = new URLSearchParams(location.search);
+    const force = qp.get('splash') === '1';
+
+    const d = new Date();
+    const today =
+      d.getFullYear() + '-' +
+      String(d.getMonth()+1).padStart(2,'0') + '-' +
+      String(d.getDate()).padStart(2,'0');
+
+    const last = localStorage.getItem(KEY);
+    const shouldShow = force || (last !== today);
+
+    if(!shouldShow){
+      splash.remove();
+    }else{
+      document.body.classList.add('splash-on');
+      requestAnimationFrame(()=> splash.classList.add('is-in'));
+      const AUTO_CLOSE_MS = 1600;
+      function closeSplash(){
+        splash.classList.add('is-out');
+        setTimeout(()=>{
+          document.body.classList.remove('splash-on');
+          splash.remove();
+        }, 600);
+      }
+      window.addEventListener('load', ()=> setTimeout(closeSplash, AUTO_CLOSE_MS));
+      splash.addEventListener('click', closeSplash);
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeSplash(); });
+      try{ localStorage.setItem(KEY, today); }catch(_){}
+    }
+  })();
+
+    const $hero = $('.hero-slider');          // ← 明確に参照を確保
+    $hero.flexslider({
+      selector: '.slides > li',
+      animation: 'fade',
+      slideshowSpeed: 6000,
+      animationSpeed: 800,
+      controlNav: false,      // ドットは使わない
+      directionNav: false,    // 付属の矢印は使わない（自前SVGを使うため）
+      pauseOnAction: false,
+      pauseOnHover: false
+    });
+
+    // 右下の自前矢印で操作
+    $('.flex-prev').on('click', function(e){ e.preventDefault(); $hero.flexslider('prev'); });
+    $('.flex-next').on('click', function(e){ e.preventDefault(); $hero.flexslider('next'); });
+
+    // ===== スクロールボタン：#content へスムーススクロール =====
+    $('a.scroll-down[href^="#"]').on('click', function(e){
+      const id = $(this).attr('href');
+      const $t = $(id);
+      if(!$t.length) return;
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $t.offset().top }, 600, 'swing');
+    });
+    
+    // 対象を自動マーキング（HTMLを触らずに済む）
+    const markReveal = (selector, perRow = 3, stagger = 80) => {
+      const nodes = Array.from(document.querySelectorAll(selector));
+      nodes.forEach((el, i) => {
+        el.classList.add('reveal');
+        // ちょいステッガー（1行に3枚想定：0ms,80ms,160ms…）
+        const delayMs = (i % perRow) * stagger;
+        el.style.transitionDelay = (delayMs/1000) + 's';
+      });
+    };
+
+    // フェードイン
+    markReveal('#wpcf7-f37-p34-o1 > form > div.inputarea');
+    
+    const io = new IntersectionObserver((entries, obs)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    navInit();
+  });
+function navInit() {
+	$('.nav-trigger').on('click', function (e) {
+		$('body').toggleClass('show');
+		e.preventDefault();
+	});
+	$('.sb-search .open').on('click', function (e) {
+		$('.sb-search').addClass('is-open');
+		e.preventDefault();
+	});
+	$('.sb-search .close').on('click', function (e) {
+		$('.sb-search').removeClass('is-open');
+		e.preventDefault();
+	});
+
+	$('#social-trigger').on('click', function (e) {
+		$('#socialLinks').toggleClass('show');
+		e.preventDefault();
+	});
+
+	if ($(window).width() > 940) {
+		$('.drop').on('mouseenter', function (e) {
+			$(this).toggleClass('showdrop');
+		});
+		$('.drop').on('mouseleave', function (e) {
+			$(this).removeClass('showdrop');
+		});
+	} else {
+		$('.drop').on('click', function (e) {
+			$(this).toggleClass('showdrop');
+		});
+	}
+	
+};
+
+  </script>
+</body>
+</html>

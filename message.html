@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Message | Commit Group</title>
+  <meta name="description" content="コミットグループは、医療・スポーツ・文化・ライフスタイルの領域で社会価値の創出をめざすグループです。" />
+  <link rel="stylesheet" href="lib/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+  <script src="lib/modernizr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script>imageMapResize();</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="home blog">
+<!-- Splash (once per day) -->
+<div id="splash" class="splash" aria-hidden="true">
+  <div class="splash__inner">
+    <div class="splash__logo" aria-label="COMMIT GROUP">
+      <svg><use xlink:href="#logo"></use></svg>
+    </div>
+  </div>
+</div>
+
+  <!-- ===== SVG Sprite（ロゴ/アイコン） ===== -->
+  <div id="svg-sprite" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <!-- 中央寄せ版 -->
+      <symbol id="logo" viewBox="0 0 2400 360" overflow="visible" preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(1200,180)">
+          <text
+            text-anchor="middle"
+            dominant-baseline="middle"
+            font-family="'Arial Black', sans-serif"
+            font-size="260"
+            fill="currentColor"
+            style="letter-spacing:.04em"
+          >COMMIT GROUP</text>
+        </g>
+      </symbol>
+      <symbol id="icon-next" viewBox="0 0 10 10">
+        <path d="M7.7,4.4 3.5,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l3.5,3.5L2.4,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/>
+      </symbol>
+      <symbol id="icon-prev" viewBox="0 0 10 10">
+        <path d="M2.3,5.6l4.2,4.2c.3.3.8.3 1.1,0 .3-.3.3-.8 0-1.2L4.1,5.1 7.6,1.4c.3-.3.3-.8 0-1.2s-.8-.3-1.1,0L2.4,4.4c-.2.2-.3.4-.3.6s.1.4.2.6z"/>
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 13 10">
+        <path d="M12.8,4.4 8.6,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l2.8,2.8H.8C.4,4.2,0,4.5,0,5s.4.8.8.8h9.4L7.5,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/>
+      </symbol>
+    </svg>
+  </div>
+
+  <!-- ===== Header（添付HTMLと同構造） ===== -->
+  <header class="is-bgcover">
+    <div class="section-inner">
+      <a href="#" class="logo"><svg><use xlink:href="#logo"></use></svg></a>
+      <div class="NavHolder">
+        <nav class="mainNav">
+          <ul class="navlist">
+            <li class="n_home"><a href="index.html"><span>Home</span></a></li>
+            <li class="n_about drop"><a href="#"><span>About us</span><svg><use xlink:href="#icon-next"></use></svg></a>
+              <ul>
+                <li><a href="message.html"><span>Message</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="company.html"><span>Our Company</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="history.html"><span>Our History</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+              </ul>
+            </li>
+            <li class="n_project"><a href="projects.html"><span>Projects</span></a></li>
+            <li class="n_news"><a href="news.html"><span>News</span></a></li>
+            <li class="n_contact"><a href="contact.html"><span>Contact</span></a></li>
+          </ul>
+          <ul class="navlist">
+            <li class="n_recruit"><a href="#" target="_blank"><span>Recruit<svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg></span></a></li>
+          </ul>
+          <ul class="lang">
+            <li><a href="#">Eng</a></li>
+            <li><a class="active" href="#">Jpn</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="nav-trigger">
+        <div class="hamburger">
+          <div class="line"><span></span></div>
+          <div class="line"><span></span></div>
+          <div class="line"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="header-after"></div>
+  <style>.section-inner.center { padding:0;  }@media (min-width: 960px){.section-inner.center { padding:0 20%;  }}</style>
+  <section>
+    <div class="section-inner">
+      <div id="breadcrumb">
+        <a href="index.html">Home</a>
+        <div class="sepa"></div>
+        <a href="message.html">About us</a>
+        <div class="sepa"></div>
+        <span>Message</span>
+      </div>
+    </div>
+
+    <div class="section-inner">
+      <div class="title-col ta-center">
+        <h1 class="serif c24">Message</h1>
+        <hr>
+        <h3 class="serif l big eachTextAnime appeartext">
+          <span style="animation-delay:.0s;">日</span>
+          <span style="animation-delay:.1s;">常</span>
+          <span style="animation-delay:.2s;">に</span>
+          <span style="animation-delay:.3s;">豊</span>
+          <span style="animation-delay:.4s;">か</span>
+          <span style="animation-delay:.5s;">さ</span>
+          <span style="animation-delay:.6s;">と</span>
+          <span style="animation-delay:.7s;">安</span>
+          <span style="animation-delay:.8s;">心</span>
+          <span style="animation-delay:.9s;">を</span>
+          <span style="animation-delay:1s;">届</span>
+          <span style="animation-delay:1.1s;">け</span>
+          <span style="animation-delay:1.2s;">、</span>
+          <span style="animation-delay:1.3s;">人</span>
+          <span style="animation-delay:1.4s;">々</span>
+          <span style="animation-delay:1.5s;">の</span>
+          <span style="animation-delay:1.6s;">人</span>
+          <span style="animation-delay:1.7s;">生</span>
+          <span style="animation-delay:1.8s;">に</span>
+          <span style="animation-delay:1.9s;">価</span>
+          <span style="animation-delay:2.0s;">値</span>
+          <span style="animation-delay:2.1s;">を</span>
+          <span style="animation-delay:2.2s;">還</span>
+          <span style="animation-delay:2.3s;">元</span>
+          <span style="animation-delay:2.4s;">す</span>
+          <span style="animation-delay:2.5s;">る</span>
+        </h3>
+        <div class="fadeUpTrigger fadeUp">
+          <p class="serif l">生活の一部に溶け込みたい。<br>生活に必要な存在。<br>世界になくてはならない存在。</p>
+          <p class="serif l">コミット・グループの夢にはまだまだ先がある。<br>全ての事業領域において、「お客様」「地域社会」「未来を担う人々」に対して誠実に、かつ責任ある歩みを約束いたします。</p>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="space"></div>
+
+    <section class="bg-lightgray">
+      <div class="section-inner nopd">
+        <div class="about-sec cf">
+          <div class="col col-h ph fadeUpTrigger fadeUp">
+            <div class="text">
+              <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1600&auto=format&fit=crop">
+            </div>
+          </div>
+          <div class="col col-t">
+            <div class="text">
+              <h3 class="serif line">新たな体験価値の創造</h3>
+              <p class="serif">コミット・グループは、「健康」を軸に未来のカルチャーを創り出すことに邁進してきました。それは、新しいライフスタイルを提案すること。時計店ををはじめ、飲食店、スポーツ事業、不動産などのコンテンツ開発から価値最大化まで、これまで培ってきたノウハウをもとに、企画から運営までワンストップで実現します。<br>まず優先するのは “ユーザー視点の体験価値”です。それぞれの場所に合わせてコンセプト、デザイン、コンテンツをアレンジ。さらに、新たな付加価値を生み出すことで本質的な価値を最大化し、長い将来を見据えた持続可能な事業へとつなげていきます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-inner nopd">
+        <div class="about-sec cf">
+          <div class="col col-h fr ph fadeUpTrigger fadeUp">
+            <div class="text">
+              <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1600&auto=format&fit=crop">
+            </div>
+          </div>
+          <div class="col col-t">
+            <div class="text fr">
+              <h3 class="serif line">日本を世界へ、世界を日本へ</h3>
+              <p class="serif">私たちは、レストランやカフェといった国内自社ブランドの飲食店運営に加え、商業施設・不動産などのバリューアップ、ウェディング、グランピング、海外でのレストラン展開など、７つの事業を展開しています。<br>日本が誇る素晴らしい文化を受け継ぎつつ、ときに海外の素晴らしいパートナーたちとコラボレーションしながら、世界中の人たちに驚きとワクワクを届けます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space"></div>
+    </section>
+
+    <section>
+      <div class="section-inner nopd">
+        <div class="about-sec cf">
+          <div class="col">
+            <div class="text">
+              <h2 class="serif">About Our Chair<span class="sans-serif" style="display:block; line-height:1.5; margin:5px 0 0; padding:5px 0 0;">創業者にして<br>コミット・グループを率いる日坂 充宏</span></h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1400&auto=format&fit=crop">
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <h3>"日常に豊かさと安心を届け、人々の人生に価値を還元する"</h3>
+              <p>私たちのグループは、地域医療に貢献する「医療法人 日坂歯科」、時計事業を担う「コミット銀座」、スポーツを通じた人材育成を支える「football assist」、そしてライフスタイルに彩りを加える「cielo8」という、異なる業態を持ちながらも、一貫した理念によってひとつに紡がれた存在です。その基礎にあるのは、「日常に豊かさと安心を届け、人々の人生に価値を還元する」という普遍的な使命感です。こうした多彩な事業は単なる多角化ではなく、各領域が相互に響き合うことで、より豊かな価値を生み出しており、各々の現場で培った「おもてなしの心」は、他事業にも共通する「心地よさの追求」に通じます。そして、そこに触れた人々が感じる幸福や癒しが、グループ全体のブランド信頼へとつながっていくのです。加えて、私たちは短期的な成果だけでなく、中長期的な社会への信頼と影響を最重要視しています。どの事業においても「人」が核であり、その成長と貢献が次の価値を創造します。志を同じくする人材が育ち、その人たちが新たなフィールドにも挑戦できる環境を築くことこそ、グループ会長としての私の責務であり、喜びです。今後も、私たちは既成概念にとらわれず、挑戦と革新を続けてまいります。そして、全ての事業領域において、「お客様」「地域社会」「未来を担う人々」に対して誠実に、かつ責任ある歩みを約束いたします。皆さまからの期待に応えられるよう、グループ一同、心をひとつにして邁進してまいります。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>@media (min-width: 320px){.col-abs{padding: 0 0 75%;}}@media (min-width: 768px){.col-abs{padding: 20px 20px 50px;}}@media (min-width: 960px){.col-abs{padding: 20px 30px 50px;}} @media (min-width: 1230px){.col-abs{padding: 20px 150px 30px 0px;}}@media (min-width: 768px){.company-sec h3{font-size: 15px;}}</style>
+      <div class="section-inner nopd">
+        <div class="about-sec cf">
+          <div class="col">
+            <div class="text">
+              <h2 class="serif">About Our CEO<span class="sans-serif" style="display:block; line-height:1.5; margin:5px 0 0; padding:5px 0 0;">コミット銀座を率いる幸田 卓朗</span></h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <img src="img/about/org_commit_ginza.jpg">
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <h3>"時間を象徴するプロダクト"</h3>
+              <p>時計を通じ、価値あるモノと瞬間を提供してきました。 グループの強みを束ね、本物志向の体験価値を次の時代へつないでいきます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-inner nopd">
+        <div class="about-sec cf">
+          <div class="col">
+            <div class="text">
+              <h2 class="serif">About Our CEO<span class="sans-serif" style="display:block; line-height:1.5; margin:5px 0 0; padding:5px 0 0;">フットボールアシストを率いる大津 祐樹</span></h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <img src="img/about/org_football_assist.jpg">
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <h3>"スポーツ×ライフスタイル"</h3>
+              <p>スポーツは人を動かし、心を熱くする。学生アスリート支援、キャリア支援、クラブ運営を通じて 挑戦が循環する仕組みを拡張し、感動体験を創出します。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-inner nopd">
+        <div class="about-sec cf">
+          <div class="col">
+            <div class="text">
+              <h2 class="serif">About Our CEO<span class="sans-serif" style="display:block; line-height:1.5; margin:5px 0 0; padding:5px 0 0;">Cielo8を率いる板垣 亮</span></h2>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <img src="img/about/org_cielo8.jpg">
+            </div>
+          </div>
+          <div class="col">
+            <div class="text">
+              <h3>"食と花で人生に彩りを"</h3>
+              <p>レストラン・ケータリング・フラワーを軸に 食 × 花 × 空間の体験設計を磨いてきました。アート感のある空間演出を通じて、 皆さまの日常をより豊かにしていきます。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="space"></div>
+    </section>
+
+
+  <!-- ===== Footer（アプリブロックは以前の要望に合わせ非表示） ===== -->
+  <footer id="contact">
+    <div class="section-inner">
+      <a href="#" class="logo salt"><svg><use xlink:href="#logo"></use></svg></a>
+      <!-- アプリ誘導ブロック（必要なら以下を有効化）
+      <a href="#" class="app-link" target="_blank">
+        <div class="app_wrapper">
+          <div class="applogo_wrapper"><img src="https://salt-group.jp/wp2017/wp-content/themes/salt-group/img/home/app_logo.png" alt="app"></div>
+          <div class="apptext_wrapper"><p>Explore the SALT App</p></div>
+        </div>
+        <svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg>
+      </a>-->
+      <div class="foot-bottom cf">
+        <ul class="info">
+          <li><a class="hajime" href="index.html"><div>HOME</div></a></li>
+          <li><a href="message.html"><div>MESSAGE</div></a></li>
+          <li><a href="company.html"><div>OUR COMPANY</div></a></li>
+          <li><a href="history.html"><div>OUR HISTORY</div></a></li>
+          <li><a href="projects.html"><div>PROJECTS</div></a></li>
+          <li><a href="news.html"><div>NEWS</div></a></li>
+          <li><a href="contact.html"><div>CONTACT</div></a></li>
+        </ul>
+      </div>
+      <div class="foot-bottom cf" style="margin-top:10px;">
+        <p class="copy">© <span id="year"></span> Commit Group</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // 年の自動更新
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== HERO：FlexSliderに一本化 =====
+  $(function(){
+
+  (function(){
+    const KEY = 'COMMIT_GROUP_SPLASH_SHOWN_DATE';
+    const splash = document.getElementById('splash');
+    if(!splash) return;
+
+    // ?splash=1 で強制表示（テスト用）
+    const qp = new URLSearchParams(location.search);
+    const force = qp.get('splash') === '1';
+
+    const d = new Date();
+    const today =
+      d.getFullYear() + '-' +
+      String(d.getMonth()+1).padStart(2,'0') + '-' +
+      String(d.getDate()).padStart(2,'0');
+
+    const last = localStorage.getItem(KEY);
+    const shouldShow = force || (last !== today);
+
+    if(!shouldShow){
+      splash.remove();
+    }else{
+      document.body.classList.add('splash-on');
+      requestAnimationFrame(()=> splash.classList.add('is-in'));
+      const AUTO_CLOSE_MS = 1600;
+      function closeSplash(){
+        splash.classList.add('is-out');
+        setTimeout(()=>{
+          document.body.classList.remove('splash-on');
+          splash.remove();
+        }, 600);
+      }
+      window.addEventListener('load', ()=> setTimeout(closeSplash, AUTO_CLOSE_MS));
+      splash.addEventListener('click', closeSplash);
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeSplash(); });
+      try{ localStorage.setItem(KEY, today); }catch(_){}
+    }
+  })();
+
+    const $hero = $('.hero-slider');          // ← 明確に参照を確保
+    $hero.flexslider({
+      selector: '.slides > li',
+      animation: 'fade',
+      slideshowSpeed: 6000,
+      animationSpeed: 800,
+      controlNav: false,      // ドットは使わない
+      directionNav: false,    // 付属の矢印は使わない（自前SVGを使うため）
+      pauseOnAction: false,
+      pauseOnHover: false
+    });
+
+    // 右下の自前矢印で操作
+    $('.flex-prev').on('click', function(e){ e.preventDefault(); $hero.flexslider('prev'); });
+    $('.flex-next').on('click', function(e){ e.preventDefault(); $hero.flexslider('next'); });
+
+    // ===== スクロールボタン：#content へスムーススクロール =====
+    $('a.scroll-down[href^="#"]').on('click', function(e){
+      const id = $(this).attr('href');
+      const $t = $(id);
+      if(!$t.length) return;
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $t.offset().top }, 600, 'swing');
+    });
+    
+    // 対象を自動マーキング（HTMLを触らずに済む）
+    const markReveal = (selector, perRow = 3, stagger = 80) => {
+      const nodes = Array.from(document.querySelectorAll(selector));
+      nodes.forEach((el, i) => {
+        el.classList.add('reveal');
+        // ちょいステッガー（1行に3枚想定：0ms,80ms,160ms…）
+        const delayMs = (i % perRow) * stagger;
+        el.style.transitionDelay = (delayMs/1000) + 's';
+      });
+    };
+
+    // フェードイン
+    markReveal('body article');
+    
+    const io = new IntersectionObserver((entries, obs)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    navInit();
+  });
+function navInit() {
+    $('.nav-trigger').on('click', function (e) {
+        $('body').toggleClass('show');
+        e.preventDefault();
+    });
+    $('.sb-search .open').on('click', function (e) {
+        $('.sb-search').addClass('is-open');
+        e.preventDefault();
+    });
+    $('.sb-search .close').on('click', function (e) {
+        $('.sb-search').removeClass('is-open');
+        e.preventDefault();
+    });
+
+    $('#social-trigger').on('click', function (e) {
+        $('#socialLinks').toggleClass('show');
+        e.preventDefault();
+    });
+
+    if ($(window).width() > 940) {
+        $('.drop').on('mouseenter', function (e) {
+            $(this).toggleClass('showdrop');
+        });
+        $('.drop').on('mouseleave', function (e) {
+            $(this).removeClass('showdrop');
+        });
+    } else {
+        $('.drop').on('click', function (e) {
+            $(this).toggleClass('showdrop');
+        });
+    }
+    
+};
+
+  </script>
+</body>
+</html>

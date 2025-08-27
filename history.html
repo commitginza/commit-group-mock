@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Our History | Commit Group</title>
+  <meta name="description" content="コミットグループは、医療・スポーツ・文化・ライフスタイルの領域で社会価値の創出をめざすグループです。" />
+  <link rel="stylesheet" href="lib/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+  <script src="lib/modernizr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script>imageMapResize();</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="home blog">
+<!-- Splash (once per day) -->
+<div id="splash" class="splash" aria-hidden="true">
+  <div class="splash__inner">
+    <div class="splash__logo" aria-label="COMMIT GROUP">
+      <svg><use xlink:href="#logo"></use></svg>
+    </div>
+  </div>
+</div>
+
+  <!-- ===== SVG Sprite（ロゴ/アイコン） ===== -->
+  <div id="svg-sprite" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <!-- 中央寄せ版 -->
+      <symbol id="logo" viewBox="0 0 2400 360" overflow="visible" preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(1200,180)">
+          <text
+            text-anchor="middle"
+            dominant-baseline="middle"
+            font-family="'Arial Black', sans-serif"
+            font-size="260"
+            fill="currentColor"
+            style="letter-spacing:.04em"
+          >COMMIT GROUP</text>
+        </g>
+      </symbol>
+      <symbol id="icon-next" viewBox="0 0 10 10">
+        <path d="M7.7,4.4 3.5,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l3.5,3.5L2.4,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/>
+      </symbol>
+      <symbol id="icon-prev" viewBox="0 0 10 10">
+        <path d="M2.3,5.6l4.2,4.2c.3.3.8.3 1.1,0 .3-.3.3-.8 0-1.2L4.1,5.1 7.6,1.4c.3-.3.3-.8 0-1.2s-.8-.3-1.1,0L2.4,4.4c-.2.2-.3.4-.3.6s.1.4.2.6z"/>
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 13 10">
+        <path d="M12.8,4.4 8.6,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l2.8,2.8H.8C.4,4.2,0,4.5,0,5s.4.8.8.8h9.4L7.5,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/>
+      </symbol>
+    </svg>
+  </div>
+
+  <!-- ===== Header（添付HTMLと同構造） ===== -->
+  <header class="is-bgcover">
+    <div class="section-inner">
+      <a href="#" class="logo"><svg><use xlink:href="#logo"></use></svg></a>
+      <div class="NavHolder">
+        <nav class="mainNav">
+          <ul class="navlist">
+            <li class="n_home"><a href="index.html"><span>Home</span></a></li>
+            <li class="n_about drop"><a href="#"><span>About us</span><svg><use xlink:href="#icon-next"></use></svg></a>
+              <ul>
+                <li><a href="message.html"><span>Message</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="company.html"><span>Our Company</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="history.html"><span>Our History</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+              </ul>
+            </li>
+            <li class="n_project"><a href="projects.html"><span>Projects</span></a></li>
+            <li class="n_news"><a href="news.html"><span>News</span></a></li>
+            <li class="n_contact"><a href="contact.html"><span>Contact</span></a></li>
+          </ul>
+          <ul class="navlist">
+            <li class="n_recruit"><a href="#" target="_blank"><span>Recruit<svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg></span></a></li>
+          </ul>
+          <ul class="lang">
+            <li><a href="#">Eng</a></li>
+            <li><a class="active" href="#">Jpn</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="nav-trigger">
+        <div class="hamburger">
+          <div class="line"><span></span></div>
+          <div class="line"><span></span></div>
+          <div class="line"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="header-after"></div>
+
+  <section class="bg-lightgray">
+    <div class="section-inner">
+      <div id="breadcrumb">
+        <a href="index.html">Home</a>
+        <div class="sepa"></div>
+        <a href="message.html">About us</a>
+        <div class="sepa"></div>
+        <span>Our History</span>
+      </div>
+    </div>
+
+    <div class="section-inner">
+      <div class="title-col">
+        <h1 class="serif">Our history</h1>
+      </div>
+    </div>
+
+    <div class="section-inner">
+      <div class="history-sec cf">
+        <div class="timeline"></div>
+        <div class="year"><span class="serif">2024</span></div>
+        <div class="colheight cf">
+          <div class="col pos-7 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2024.3</h3>
+              <hr>
+              <p>中目黒・高架下に「HVEN」をオープン。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="year"><span class="serif">2023</span></div>
+        <div class="colheight mid cf">
+          <div class="col pos-10 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2023.11</h3>
+              <hr>
+              <p>麻布台ヒルズ ガーデンプラザAに「麻布台ヒルズギャラリーカフェ」をオープン</p>
+            </div>
+          </div>
+          <div class="col pos-8 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2023.10</h3>
+              <hr>
+              <p>コレド室町テラスに「Atrevío」を期間限定オープン</p>
+            </div>
+          </div>
+          <div class="col pos-6 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2023.10</h3>
+              <hr>
+              <p>虎ノ門ヒルズ・ステーションタワーに「TOKYO NODE CAFE」をオープン</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="year"><span class="serif">2022</span></div>
+        <div class="colheight cf">
+          <div class="col pos-7 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2022.7</h3>
+              <hr>
+              <p>千葉・勝浦にレストランとサーマルスプリングスパの複合施設「edén」と沖縄ぜんざいの「富士家」をオープン。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="year"><span class="serif">2021</span></div>
+        <div class="colheight mid cf">
+          <div class="col pos-10 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2021.10</h3>
+              <hr>
+              <p>青山ビルヂング地下1階、青山一番街に「神戸・六甲道　ぎゅんた」をオープン</p>
+            </div>
+          </div>
+          <div class="col pos-9 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2021.7</h3>
+              <hr>
+              <p>「麹町大通りビルディング」のバリューアップをプロデュース。<br>
+                    ビル1Fカフェ、too easy 株式会社が手がける「BYRON BAY coffee」をリーシング。<br>
+                    ビル1F外「THE GOOD VIBES」2号店となるキッチンカーをオープン。<br><br>
+                    住所非公開、メンバーシップ・アウトドア・パーク「SUNSET PARK CLUB」をオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-4 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2021.4</h3>
+              <hr>
+              <p>株式会社ガラからソルトクチュール株式会社に社名変更。</p>
+            </div>
+          </div>
+          <div class="col pos-2 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2021.2</h3>
+              <hr>
+              <p>Salt Technologies株式会社 設立。<br>
+                大和ハウス運営、南砂社員研修センター内レストラン「シャレー」をオープン。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="year"><span class="serif">2020</span></div>
+        <div class="colheight mid cf">
+          <div class="col pos-14 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2020.11</h3>
+              <hr>
+              <p>西麻布に「洋食ビストロTOYAMA」をオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-12 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2020.10</h3>
+              <hr>
+              <p>THE RESTAURAN内に「馬小房」をオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-10 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2020.7</h3>
+              <hr>
+              <p>広尾に「EAT PLAY WORKS」をオープン。<br>
+                    広尾「THE RESTAURAN」をプロデュース。<br>
+                    THE RESTAURAN内に「OXOMOCO」「Salam」をオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-7 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2020.3</h3>
+              <hr>
+              <p>丸の内ブリックスクエアに「すき焼き十二天」をオープン。<br>
+                大和ハウス運営、社員寮内食堂「エルプレイス南砂」をオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-3 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2020.2</h3>
+              <hr>
+              <p>SALT FACTORY株式会社設立。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="year"><span class="serif">2019</span></div>
+        <div class="colheight cf">
+          <div class="col pos-12 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2019.12</h3>
+              <hr>
+              <p>東急プラザ渋谷「Pepper PARLOR」をプロデュース・運営。</p>
+            </div>
+          </div>
+          <div class="col pos-10 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2019.11</h3>
+              <hr>
+              <p>マルイファミリー溝口に「THE STEAK」をオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-7 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2019.6</h3>
+              <hr>
+              <p>芝浦に「THE GOOD VIBES」をリニューアルオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-3 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2019.4</h3>
+              <hr>
+              <p>阪急西宮ガーデンズに「Whips」をオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-1 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2019.3</h3>
+              <hr>
+              <p>阪急西宮ガーデンズに「鉄板焼 鶏料理 かしわ」をオープン。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="year"><span class="serif">2018</span></div>
+        <div class="colheight cf">
+          <div class="col pos-12 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2018.11</h3>
+              <hr>
+              <p>青山ビルヂング地下１階フロアに「青山一番街 AOYAMA FIRST AVENUE」をプロデュース。<br>
+                    青山一番街に「THE BURN」「香辛」「かしみん 青山店」「手打うどん いわしや」をオープン</p>
+            </div>
+          </div>
+          <div class="col pos-10 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2018.7</h3>
+              <hr>
+              <p>マークイズ静岡に「THE STEAK」をオープン。<br>
+                    PARCO_ya上野に「鶏料理 鉄板焼 かしわ」をオープン。</p>
+            </div>
+          </div>
+          <div class="col pos-5 cf">
+            <div class="point"><span></span></div>
+            <div class="col-inner">
+              <h3 class="serif">2018.2</h3>
+              <hr>
+              <p>アトレ川崎に「COFFEEMILK」をオープン。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="year"><span class="serif">2017</span></div>
+          <div class="colheight cf">
+            <div class="col pos-12 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                  <h3 class="serif">2017.11</h3>
+                  <hr>
+                  <p>新丸の内ビルディングに「焼肉 The INNOCENT CARVERY」をオープン。</p>
+                </div>
+            </div>
+            <div class="col pos-10 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                    <h3 class="serif">2017.10</h3>
+                    <hr>
+                    <p>六本木ヒルズ森タワー52階に「THE MOON Lounge」をオープン。</p>
+                </div>
+            </div>
+            <div class="col pos-7 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                    <h3 class="serif">2017.09</h3>
+                    <hr>
+                    <p>上野の森さくらテラスに「上野洋食 遠山」をオープン。</p>
+                </div>
+            </div>
+            <div class="col pos-4 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                    <h3 class="serif">2017.06</h3>
+                    <hr>
+                    <p>「Tokyo Classic」内にキャンプ場プロジェクトプロデュース。</p>
+                </div>
+            </div>
+            <div class="col pos-2 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                    <h3 class="serif">2017.04</h3>
+                    <hr>
+                    <p>名古屋JRゲートタワーに「Johnnie’s Brasserie」および「鉄板焼　かしわ」をオープン。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="year"><span class="serif">2016</span></div>
+           <div class="colheight low cf">
+            <div class="col pos-3 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                  <h3 class="serif">2016.03</h3>
+                  <hr>
+                  <p>大名古屋ビルヂングに「名古屋コーチン親子丼　酉しみず」をオープン。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="year"><span class="serif">2015</span></div>
+          <div class="colheight cf">
+            <div class="col pos-12 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                  <h3 class="serif">2015.12</h3>
+                  <hr>
+                  <p>東京・西麻布に「The INNOCENT CARVERY WAGYU SPECIALITY LABO」をオープン。<br>イギリス・オックスフォードシャー、SOHO FARMHOUSE内に「PEN YEN」をオープン。</p>
+                </div>
+            </div>
+            <div class="col pos-9 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                  <h3 class="serif">2015.06</h3>
+                  <hr>
+                  <p>六本木ヒルズ森タワー52階に「Museum Cafe &amp; Restaurant Cafe area THE SUN」および「Museum Cafe &amp; Restaurant Restaurant area THE MOON」をオープン。</p>
+                </div>
+            </div>
+            <div class="col pos-4 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                  <h3 class="serif">2015.03</h3>
+                  <hr>
+                  <p>イオンモール幕張新都心に「ぎゅんた イオンモール幕張新都心店」をオープン。</p>
+                </div>
+            </div>
+            <div class="col pos-2 cf">
+                <div class="point"><span></span></div>
+                <div class="col-inner">
+                  <h3 class="serif">2015.02</h3>
+                  <hr>
+                  <p>ロンドン・ピカデリーサーカスの中心部HAM YARD HOTEL 内に「engawa」をオープン。<br>天王寺MIOプラザ館に「Muu Muu Diner天王寺MIOプラザ店」をオープン。</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="space"></div>
+  </section>
+
+  <!-- ===== Footer（アプリブロックは以前の要望に合わせ非表示） ===== -->
+  <footer id="contact">
+    <div class="section-inner">
+      <a href="#" class="logo salt"><svg><use xlink:href="#logo"></use></svg></a>
+      <!-- アプリ誘導ブロック（必要なら以下を有効化）
+      <a href="#" class="app-link" target="_blank">
+        <div class="app_wrapper">
+          <div class="applogo_wrapper"><img src="https://salt-group.jp/wp2017/wp-content/themes/salt-group/img/home/app_logo.png" alt="app"></div>
+          <div class="apptext_wrapper"><p>Explore the SALT App</p></div>
+        </div>
+        <svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg>
+      </a>-->
+      <div class="foot-bottom cf">
+        <ul class="info">
+          <li><a class="hajime" href="index.html"><div>HOME</div></a></li>
+          <li><a href="message.html"><div>MESSAGE</div></a></li>
+          <li><a href="company.html"><div>OUR COMPANY</div></a></li>
+          <li><a href="history.html"><div>OUR HISTORY</div></a></li>
+          <li><a href="projects.html"><div>PROJECTS</div></a></li>
+          <li><a href="news.html"><div>NEWS</div></a></li>
+          <li><a href="contact.html"><div>CONTACT</div></a></li>
+        </ul>
+      </div>
+      <div class="foot-bottom cf" style="margin-top:10px;">
+        <p class="copy">© <span id="year"></span> Commit Group</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // 年の自動更新
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== HERO：FlexSliderに一本化 =====
+  $(function(){
+
+  (function(){
+    const KEY = 'COMMIT_GROUP_SPLASH_SHOWN_DATE';
+    const splash = document.getElementById('splash');
+    if(!splash) return;
+
+    // ?splash=1 で強制表示（テスト用）
+    const qp = new URLSearchParams(location.search);
+    const force = qp.get('splash') === '1';
+
+    const d = new Date();
+    const today =
+      d.getFullYear() + '-' +
+      String(d.getMonth()+1).padStart(2,'0') + '-' +
+      String(d.getDate()).padStart(2,'0');
+
+    const last = localStorage.getItem(KEY);
+    const shouldShow = force || (last !== today);
+
+    if(!shouldShow){
+      splash.remove();
+    }else{
+      document.body.classList.add('splash-on');
+      requestAnimationFrame(()=> splash.classList.add('is-in'));
+      const AUTO_CLOSE_MS = 1600;
+      function closeSplash(){
+        splash.classList.add('is-out');
+        setTimeout(()=>{
+          document.body.classList.remove('splash-on');
+          splash.remove();
+        }, 600);
+      }
+      window.addEventListener('load', ()=> setTimeout(closeSplash, AUTO_CLOSE_MS));
+      splash.addEventListener('click', closeSplash);
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeSplash(); });
+      try{ localStorage.setItem(KEY, today); }catch(_){}
+    }
+  })();
+
+    const $hero = $('.hero-slider');          // ← 明確に参照を確保
+    $hero.flexslider({
+      selector: '.slides > li',
+      animation: 'fade',
+      slideshowSpeed: 6000,
+      animationSpeed: 800,
+      controlNav: false,      // ドットは使わない
+      directionNav: false,    // 付属の矢印は使わない（自前SVGを使うため）
+      pauseOnAction: false,
+      pauseOnHover: false
+    });
+
+    // 右下の自前矢印で操作
+    $('.flex-prev').on('click', function(e){ e.preventDefault(); $hero.flexslider('prev'); });
+    $('.flex-next').on('click', function(e){ e.preventDefault(); $hero.flexslider('next'); });
+
+    // ===== スクロールボタン：#content へスムーススクロール =====
+    $('a.scroll-down[href^="#"]').on('click', function(e){
+      const id = $(this).attr('href');
+      const $t = $(id);
+      if(!$t.length) return;
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $t.offset().top }, 600, 'swing');
+    });
+    
+    // 対象を自動マーキング（HTMLを触らずに済む）
+    const markReveal = (selector, perRow = 3, stagger = 80) => {
+      const nodes = Array.from(document.querySelectorAll(selector));
+      nodes.forEach((el, i) => {
+        el.classList.add('reveal');
+        // ちょいステッガー（1行に3枚想定：0ms,80ms,160ms…）
+        const delayMs = (i % perRow) * stagger;
+        el.style.transitionDelay = (delayMs/1000) + 's';
+      });
+    };
+
+    // フェードイン
+    markReveal('body article');
+    
+    const io = new IntersectionObserver((entries, obs)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    navInit();
+  });
+function navInit() {
+    $('.nav-trigger').on('click', function (e) {
+        $('body').toggleClass('show');
+        e.preventDefault();
+    });
+    $('.sb-search .open').on('click', function (e) {
+        $('.sb-search').addClass('is-open');
+        e.preventDefault();
+    });
+    $('.sb-search .close').on('click', function (e) {
+        $('.sb-search').removeClass('is-open');
+        e.preventDefault();
+    });
+
+    $('#social-trigger').on('click', function (e) {
+        $('#socialLinks').toggleClass('show');
+        e.preventDefault();
+    });
+
+    if ($(window).width() > 940) {
+        $('.drop').on('mouseenter', function (e) {
+            $(this).toggleClass('showdrop');
+        });
+        $('.drop').on('mouseleave', function (e) {
+            $(this).removeClass('showdrop');
+        });
+    } else {
+        $('.drop').on('click', function (e) {
+            $(this).toggleClass('showdrop');
+        });
+    }
+    
+};
+
+  </script>
+</body>
+</html>
