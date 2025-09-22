@@ -1995,3 +1995,10 @@ header, header .section-inner, header .NavHolder, header .mainNav{
 
 /* 背景スクロール抑止 */
 body.modal-open{overflow:hidden;}
+
+/* 採用 */
+.recruit{background:#fafafa;text-align:center}
+.recruit h2{margin-bottom:20px}
+.recruit p{max-width:720px;margin:0 auto 30px;line-height:1.6;color:var(--muted)}
+.recruit .btn{background:#111}
+.recruit .btn:hover{background:var(--accent)}
