@@ -2002,3 +2002,13 @@ body.modal-open{overflow:hidden;}
 .recruit p{max-width:720px;margin:0 auto 30px;line-height:1.6;color:var(--muted)}
 .recruit .btn{background:#111}
 .recruit .btn:hover{background:var(--accent)}
+#recruit{position:relative}
+#recruit.on-image{background-repeat:no-repeat;background-size:cover;background-position:center;min-height:520px;padding:clamp(80px,10vw,160px) 0}
+@media(min-width:960px){#recruit.on-image{min-height:60vh}}
+#recruit .overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,.18) 40%, rgba(0,0,0,0));pointer-events:none}
+#recruit.on-image h2{color:#fff}
+#recruit.on-image .muted{color:rgba(255,255,255,.9)}
+#recruit.on-image .card{background:rgba(255,255,255,.92)}
+/* Button visibility fix */
+.recruit .btn{color:#fff !important}
+.recruit .btn svg, .btn svg *{fill:currentColor}
