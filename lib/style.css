@@ -226,7 +226,7 @@ a.scroll-down span::before { position: absolute; top: 6px; left: 50%; content: '
 @media (min-width: 960px){
     header { height: 100px; overflow: visible; -webkit-transition: height 666ms cubic-bezier(.666,0,.333,1); -ms-transition: height 666ms cubic-bezier(.666,0,.333,1); transition: height 666ms cubic-bezier(.666,0,.333,1); }
 /*    header .logo { left:30px;  }*/
-    header .logo { position: absolute; top:35px; left:30px; margin-left:0; width: 136px; height: 30px; z-index: 99; }
+    header .logo { position: absolute; top:35px; left:30px; margin-left:0; width: 170px; height: 30px; z-index: 99; }
     header .NavHolder { position: absolute; display: block; border-top: none; width: 100%; height: 100px; left:auto; top:0; padding:0; z-index:42; overflow: visible; -ms-transform:translate(0%,0); -webkit-transform:translate3d(0%,0,0); transform:translate3d(0%,0,0); -webkit-transition:all 666ms cubic-bezier(.666,0,.333,1); -moz-transition:all 666ms cubic-bezier(.666,0,.333,1); transition:all 666ms cubic-bezier(.666,0,.333,1); }
     header .NavHolder .mainNav { position: absolute; left:auto; right: 0; border-top: none; text-align: center; }
     header .NavHolder .mainNav .navlist { padding:0; display: inline-block; text-align: left; }
