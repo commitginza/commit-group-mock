@@ -2004,7 +2004,12 @@ body.modal-open{overflow:hidden;}
 .recruit .btn:hover{background:var(--accent)}
 #recruit{position:relative}
 #recruit.on-image{background-repeat:no-repeat;background-size:cover;background-position:center;min-height:520px;padding:clamp(80px,10vw,160px) 0}
-@media(min-width:960px){#recruit.on-image{min-height:60vh}}
+@media(min-width:960px){
+  #recruit.on-image{min-height:60vh}
+  .recruit-section .about-sec{display:flex;align-items:flex-start;gap:40px;max-width:1080px;margin:0 auto;}
+  .recruit-section .about-sec .col{width:50%!important;}
+  .recruit-section .about-sec .col .img{height:400px;padding-bottom:0;}
+}
 #recruit .overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,.18) 40%, rgba(0,0,0,0));pointer-events:none}
 #recruit.on-image h2{color:#fff;font-size:clamp(34px,5vw,56px);font-weight:700;text-shadow:0 4px 14px rgba(0,0,0,.55);}
 #recruit.on-image .muted{color:rgba(255,255,255,.9)}
@@ -2016,8 +2021,9 @@ body.modal-open{overflow:hidden;}
 #recruit.on-image .btn{font-size:15px;padding:16px 34px;background:linear-gradient(135deg,#b71c1c,#e53935);box-shadow:0 6px 18px rgba(0,0,0,.3);transition:transform .25s,box-shadow .25s;color: white;}
 #recruit.on-image .btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 10px 24px rgba(0,0,0,.45)}
 #recruit .container {width: 700px;margin: 0 auto;padding: 2rem 1rem;background-color: #ffffff69;border-radius: 6px;}
+.recruit-section .about-sec .col{width:100%!important;float:none!important;margin:0 auto;}
 .recruit-section .about-sec .col .img{width: min(920px, 100%) !important;margin: 0 auto 16px;height: auto;padding-bottom: 66.666%;background-size: cover !important;background-position: center !important;border-radius: 8px;}
-.recruit-section .about-sec { text-align: left; }
+.recruit-section .about-sec { text-align: left;display:block; }
 
 .recruit-section .company-list .list .td ul { margin: 0; padding: 0; }
 .recruit-section .company-list .list .td li{padding-left: 0;margin: 4px 0;line-height: 1.7;text-align: left;}
