@@ -2006,9 +2006,12 @@ body.modal-open{overflow:hidden;}
 #recruit.on-image{background-repeat:no-repeat;background-size:cover;background-position:center;min-height:520px;padding:clamp(80px,10vw,160px) 0}
 @media(min-width:960px){#recruit.on-image{min-height:60vh}}
 #recruit .overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,.18) 40%, rgba(0,0,0,0));pointer-events:none}
-#recruit.on-image h2{color:#fff}
+#recruit.on-image h2{color:#fff;font-size:clamp(34px,5vw,56px);font-weight:700;text-shadow:0 4px 14px rgba(0,0,0,.55);}
 #recruit.on-image .muted{color:rgba(255,255,255,.9)}
 #recruit.on-image .card{background:rgba(255,255,255,.92)}
 /* Button visibility fix */
 .recruit .btn{color:#fff !important}
 .recruit .btn svg, .btn svg *{fill:currentColor}
+#recruit.on-image p{font-size:16px;max-width:720px;margin:12px auto;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+#recruit.on-image .btn{font-size:15px;padding:16px 34px;background:linear-gradient(135deg,#b71c1c,#e53935);box-shadow:0 6px 18px rgba(0,0,0,.3);transition:transform .25s,box-shadow .25s}
+#recruit.on-image .btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 10px 24px rgba(0,0,0,.45)}
