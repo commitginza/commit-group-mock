@@ -3,372 +3,297 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>採用情報 | Commit Group</title>
-  <meta name="description" content="Commit Group の採用ランディング。各社・各職の募集要項と応募リンクを掲載。" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#ffffff;--bg-alt:#fafafa;--ink:#111;--muted:#6b7280;--line:#e5e7eb;
-      --accent:#b71c1c;--accent-2:#e53935;--radius:14px;--shadow:0 6px 24px rgba(0,0,0,.08);
-    }
-    html{scroll-behavior:smooth}
-    body{margin:0;color:var(--ink);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-family:'Noto Sans JP',system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial}
-    img{max-width:100%;display:block}
-    a{color:inherit;text-decoration:none}
-    h1,h2,h3{font-family:'Playfair Display',ui-serif,Georgia,serif;letter-spacing:.02em;margin:.2em 0 .5em}
-    h1{font-size:clamp(32px,5.4vw,56px)}
-    h2{font-size:clamp(24px,3.4vw,36px)}
-    h3{font-size:clamp(18px,2.2vw,22px)}
-    p{margin:.6em 0}
-    .wrap{width:min(1180px,92vw);margin:0 auto}
-    .stack{display:grid;gap:clamp(18px,2.4vw,28px)}
-    .pad{padding:clamp(18px,4vw,40px)}
-    .pad-y{padding:clamp(28px,6vw,90px) 0}
-    .muted{color:var(--muted)}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em;box-shadow:0 6px 16px rgba(0,0,0,.2);transition:transform .2s,box-shadow .2s}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.28)}
-    .badge{display:inline-block;font-size:11px;color:#fff;background:#000000b3;border:1px solid #fff6;border-radius:999px;padding:2px 10px}
-    .grid{display:grid;gap:18px}
-    @media(min-width:768px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
-    .card .media{aspect-ratio:3/2;overflow:hidden}
-    .card .media img{width:100%;height:100%;object-fit:cover}
-    .card .body{padding:18px}
-    .list{margin:.2em 0 .8em;padding-left:1.2em}
-    .list li{margin:.25em 0}
-
-    /* Header */
-    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:10}
-    header .inner{height:64px;display:flex;align-items:center;justify-content:space-between}
-    header .brand{font-weight:800;letter-spacing:.06em}
-
-    /* Hero */
-    .hero{position:relative;min-height:52vh;display:grid;place-items:center;background:linear-gradient(180deg,#f7f7f7, #ffffff)}
-    .hero .center{text-align:center}
-    .hero p{max-width:900px;margin:10px auto 0}
-
-    /* Sticky company nav */
-    .company-nav{position:sticky;top:64px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);z-index:9}
-    .company-nav .wrap{display:flex;gap:10px;overflow:auto;padding:10px 0}
-    .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;white-space:nowrap;cursor:pointer}
-    .chip:hover{border-color:#bbb}
-
-    /* Company section */
-    .company{scroll-margin-top:110px}
-    .company .head{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-    .company .head .logo{width:46px;height:46px;border-radius:8px;display:grid;place-items:center;background:#111;color:#fff;font-weight:800;letter-spacing:.04em}
-
-    /* Position card */
-    .position{display:flex;flex-direction:column;height:100%}
-    .position .body h3{margin-top:0}
-    .position .meta{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
-    .position .footer{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
-
-    /* Footer */
-    footer{border-top:1px solid var(--line)}
-    .copy{font-size:12px;color:var(--muted);text-align:center}
-  </style>
+  <title>Recruit | Commit Group</title>
+  <meta name="description" content="コミットグループの採用情報。各社・各職の募集要項と応募リンク。" />
+  <link rel="stylesheet" href="lib/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+  <script src="lib/modernizr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+  <script>imageMapResize();</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
-  <header>
-    <div class="wrap inner">
-      <div class="brand">COMMIT GROUP</div>
-      <nav aria-label="breadcrumb" class="muted" style="font-size:12px">採用情報</nav>
+<body class="home blog">
+<!-- Splash (once per day) -->
+<div id="splash" class="splash" aria-hidden="true">
+  <div class="splash__inner">
+    <div class="splash__logo" aria-label="COMMIT GROUP">
+      <svg><use xlink:href="#logo"></use></svg>
+    </div>
+  </div>
+</div>
+
+  <!-- ===== SVG Sprite（ロゴ/アイコン） ===== -->
+  <div id="svg-sprite" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <symbol id="logo" viewBox="0 0 2400 360" overflow="visible" preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(1200,180)">
+          <text text-anchor="middle" dominant-baseline="middle" font-family="'Arial Black', sans-serif" font-size="260" fill="currentColor" style="letter-spacing:.04em">COMMIT GROUP</text>
+        </g>
+      </symbol>
+      <symbol id="icon-next" viewBox="0 0 10 10"><path d="M7.7,4.4 3.5,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l3.5,3.5L2.4,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/></symbol>
+      <symbol id="icon-prev" viewBox="0 0 10 10"><path d="M2.3,5.6l4.2,4.2c.3.3.8.3 1.1,0 .3-.3.3-.8 0-1.2L4.1,5.1 7.6,1.4c.3-.3.3-.8 0-1.2s-.8-.3-1.1,0L2.4,4.4c-.2.2-.3.4-.3.6s.1.4.2.6z"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 13 10"><path d="M12.8,4.4 8.6,0.2c-.3-.3-.8-.3-1.1,0s-.3.8,0,1.2l2.8,2.8H.8C.4,4.2,0,4.5,0,5s.4.8.8.8h9.4L7.5,8.6c-.3.3-.3.8,0,1.2.3.3.8.3,1.1,0l4.1-4.2c.2-.2.3-.4.3-.6s-.1-.4-.2-.6z"/></symbol>
+    </svg>
+  </div>
+
+  <!-- ===== Header（news.html と同構成） ===== -->
+  <header class="is-bgcover">
+    <div class="section-inner">
+      <a href="#" class="logo"><svg><use xlink:href="#logo"></use></svg></a>
+      <div class="NavHolder">
+        <nav class="mainNav">
+          <ul class="navlist">
+            <li class="n_home"><a href="index.html"><span>Home</span></a></li>
+            <li class="n_about drop"><a href="#"><span>About us</span><svg><use xlink:href="#icon-next"></use></svg></a>
+              <ul>
+                <li><a href="message.html"><span>Message</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="company.html"><span>Our Company</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+                <li><a href="history.html"><span>Our History</span><svg><use xlink:href="#icon-next"></use></svg></a></li>
+              </ul>
+            </li>
+            <li class="n_project"><a href="projects.html"><span>Projects</span></a></li>
+            <li class="n_news"><a href="news.html"><span>News</span></a></li>
+            <li class="n_contact"><a href="contact.html"><span>Contact</span></a></li>
+          </ul>
+          <ul class="navlist">
+            <li class="n_recruit"><a href="recruit.html" aria-current="page"><span>Recruit<svg class="icon-blank" viewBox="0 0 10 8"><path d="M7 2H0v6h8V2H7zm0 5H1V3h6v4z"/><path d="M9 0H3v1h6v4h1V0z"/></svg></span></a></li>
+          </ul>
+          <ul class="lang">
+            <li><a href="#">Eng</a></li>
+            <li><a class="active" href="#">Jpn</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="nav-trigger">
+        <div class="hamburger"><div class="line"><span></span></div><div class="line"><span></span></div><div class="line"><span></span></div></div>
+      </div>
     </div>
   </header>
+  <div class="header-after"></div>
 
-  <!-- Hero -->
-  <section class="hero pad-y">
-    <div class="wrap center">
-      <h1>採用情報</h1>
-      <p class="muted">Commit Groupでは、新しい価値を創造し、共に成長していく仲間を募集しています。スポーツ・医療・ライフスタイル・ラグジュアリーなど多様な領域で挑戦できる環境です。応募は各募集の「応募サイトへ」から外部サービス（リクナビ等）へ遷移します。</p>
+  <!-- ===== ページタイトル・パンくず ===== -->
+  <section class="bg-lightgray renew">
+    <div class="section-inner">
+      <div id="breadcrumb">
+        <a href="index.html">Home</a>
+        <div class="sepa"></div>
+        <span>Recruit</span>
+      </div>
+    </div>
+    <div class="section-inner">
+      <div class="title-col">
+        <h1 class="serif">Recruit</h1>
+        <p class="ta-center">各社・各職の募集一覧。応募は外部サイト（リクナビ等）に遷移します。</p>
+      </div>
     </div>
   </section>
 
-  <!-- Sticky Company Nav -->
-  <div class="company-nav">
-    <div class="wrap">
-      <a class="chip" href="#commit-ginza">COMMIT GINZA（腕時計）</a>
-      <a class="chip" href="#football-assist">FOOTBALL ASSIST（スポーツ）</a>
-      <a class="chip" href="#cielo8">CIELO8（飲食・空間）</a>
-      <a class="chip" href="#ai-flower">AI.FLOWER（花・装飾）</a>
-      <a class="chip" href="#dentists">歯の寿命をのばす会（医療）</a>
-    </div>
-  </div>
-
+  <!-- ===== 会社ごとのセクション（style.css 既存レイアウトに準拠） ===== -->
   <!-- COMMIT GINZA -->
-  <section id="commit-ginza" class="company pad-y">
-    <div class="wrap stack">
-      <div class="head">
-        <div class="logo">CG</div>
-        <div>
-          <h2>COMMIT GINZA（腕時計）</h2>
-          <p class="muted">ロレックス・パテック・AP など高級腕時計の販売・買取・EC運営。顧客体験の最大化と事業の継続的な拡張を担う人材を募集。</p>
+  <section class="section-inner">
+    <div class="about-sec cf right">
+      <div class="col col-d pd-r">
+        <div class="text">
+          <h2 class="serif">COMMIT GINZA（腕時計）</h2>
+          <h3>高級腕時計の販売・買取・EC運営。体験価値の最大化を担うメンバーを募集。</h3>
+          <ul class="company-list">
+            <li class="list cf">
+              <div class="tt">フロントエンドエンジニア</div>
+              <div class="td">
+                <ul>
+                  <li>Next.js / Shopify(Liquid) / GA4</li>
+                  <li>EC/LPのUI最適化、LCP/CLS改善、計測設計</li>
+                  <li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="list cf">
+              <div class="tt">バックエンド/オートメーション</div>
+              <div class="td">
+                <ul>
+                  <li>GAS / Salesforce / 各種API 連携</li>
+                  <li>在庫・価格・会計データの整備、バッチ/監視</li>
+                  <li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="list cf">
+              <div class="tt">セールスアドバイザー</div>
+              <div class="td">
+                <ul>
+                  <li>販売・買取接客、オンライン接客、商品管理</li>
+                  <li>英語/中国語歓迎</li>
+                  <li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-
-      <div class="grid cols-3">
-        <!-- FE -->
-        <article class="card position">
-          <div class="media"><img src="img/home/watch_top_banner.jpg" alt="Frontend"></div>
-          <div class="body">
-            <h3>フロントエンドエンジニア</h3>
-            <div class="meta">
-              <span class="badge">Next.js</span>
-              <span class="badge">Shopify(Liquid)</span>
-              <span class="badge">GA4/SEO</span>
-            </div>
-            <ul class="list">
-              <li>EC/LPのUI最適化、サイト高速化（CLS/LCP改善）</li>
-              <li>Liquid × GraphQL での商品ページ拡張、翻訳/多言語対応</li>
-              <li>スキーマ設計、計測タグ運用、A/B テスト</li>
-            </ul>
-            <p class="muted">必須: HTML/CSS/JS、いずれかのフレームワーク。歓迎: Shopify運用経験、画像最適化。</p>
-            <div class="footer">
-              <a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a>
-              <a class="chip" href="https://commit-watch.co.jp/" target="_blank" rel="noopener">会社サイト</a>
-            </div>
-          </div>
-        </article>
-        <!-- Backend/Automation -->
-        <article class="card position">
-          <div class="media"><img src="img/home/dentist_top_banner.jpg" alt="Automation"></div>
-          <div class="body">
-            <h3>バックエンド / オートメーション</h3>
-            <div class="meta">
-              <span class="badge">GAS</span>
-              <span class="badge">Salesforce</span>
-              <span class="badge">ETL</span>
-            </div>
-            <ul class="list">
-              <li>Salesforce × Shopify × 各種APIの連携設計とGAS自動化</li>
-              <li>在庫/価格/会計データの整備、バッチ・監視設計</li>
-              <li>ダッシュボード、レポート基盤整備</li>
-            </ul>
-            <p class="muted">必須: GAS or Node.js、SQL。歓迎: Salesforce Apex、BigQuery。</p>
-            <div class="footer">
-              <a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a>
-              <a class="chip" href="https://commit-watch.co.jp/" target="_blank" rel="noopener">会社サイト</a>
-            </div>
-          </div>
-        </article>
-        <!-- Sales Advisor -->
-        <article class="card position">
-          <div class="media"><img src="img/home/flower_top_banner.jpg" alt="Advisor"></div>
-          <div class="body">
-            <h3>セールスアドバイザー（店頭/オンライン）</h3>
-            <div class="meta">
-              <span class="badge">接客</span>
-              <span class="badge">査定補助</span>
-              <span class="badge">多言語歓迎</span>
-            </div>
-            <ul class="list">
-              <li>店頭での販売・買取接客、オンライン接客（ビデオ/チャット）</li>
-              <li>商品管理、撮影・掲載、SNSの簡易運用</li>
-              <li>在庫/売上レポートの簡易入力</li>
-            </ul>
-            <p class="muted">歓迎: 高級商材の接客経験、英語/中国語。</p>
-            <div class="footer">
-              <a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a>
-              <a class="chip" href="https://commit-watch.co.jp/" target="_blank" rel="noopener">会社サイト</a>
-            </div>
-          </div>
-        </article>
+      <div class="col col-h">
+        <div class="img" style="background-image:url('img/home/watch_top_banner.jpg')"></div>
       </div>
     </div>
   </section>
 
   <!-- FOOTBALL ASSIST -->
-  <section id="football-assist" class="company pad-y" style="background:var(--bg-alt)">
-    <div class="wrap stack">
-      <div class="head">
-        <div class="logo">FA</div>
-        <div>
-          <h2>FOOTBALL ASSIST（スポーツ）</h2>
-          <p class="muted">スポーツの価値最大化をミッションに、チーム運営支援、スクール、イベント運営などを展開。</p>
-        </div>
+  <section class="section-inner bg-lightgray">
+    <div class="about-sec cf">
+      <div class="col col-h pd-r">
+        <div class="img" style="background-image:url('img/home/sport_top_banner.jpg')"></div>
       </div>
-      <div class="grid cols-3">
-        <article class="card position">
-          <div class="media"><img src="img/home/sport_top_banner.jpg" alt="Coach"></div>
-          <div class="body">
-            <h3>コーチ / トレーナー</h3>
-            <div class="meta"><span class="badge">育成</span><span class="badge">資格歓迎</span></div>
-            <ul class="list">
-              <li>育成年代の指導、カリキュラム作成、イベント運営</li>
-              <li>選手/保護者コミュニケーション、評価レポート</li>
-            </ul>
-            <p class="muted">歓迎: 指導者ライセンス、救急講習。</p>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-        <article class="card position">
-          <div class="media"><img src="img/home/dinner_top_banner.jpg" alt="Ops"></div>
-          <div class="body">
-            <h3>オペレーション / イベント運営</h3>
-            <div class="meta"><span class="badge">運営</span><span class="badge">渉外</span></div>
-            <ul class="list">
-              <li>大会・イベントの企画運営、渉外、スケジュール管理</li>
-              <li>SNS/サイト更新、スポンサー窓口</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-        <article class="card position">
-          <div class="media"><img src="img/home/flower_top_banner.jpg" alt="Bizdev"></div>
-          <div class="body">
-            <h3>ビジネス開発</h3>
-            <div class="meta"><span class="badge">企画</span><span class="badge">提携</span></div>
-            <ul class="list">
-              <li>新規プログラムの立ち上げ、法人提携、収益化設計</li>
-              <li>KPI設計、レポーティング</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
+      <div class="col col-d">
+        <div class="text">
+          <h2 class="serif">FOOTBALL ASSIST（スポーツ）</h2>
+          <h3>スポーツの価値最大化。スクール運営、イベント、ビジネス開発。</h3>
+          <ul class="company-list">
+            <li class="list cf">
+              <div class="tt">コーチ/トレーナー</div>
+              <div class="td"><ul>
+                <li>育成年代の指導、評価レポート、イベント運営</li>
+                <li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li>
+              </ul></div>
+            </li>
+            <li class="list cf">
+              <div class="tt">オペレーション/イベント</div>
+              <div class="td"><ul>
+                <li>大会運営、渉外、SNS/サイト更新</li>
+                <li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li>
+              </ul></div>
+            </li>
+            <li class="list cf">
+              <div class="tt">ビジネス開発</div>
+              <div class="td"><ul>
+                <li>新規プログラム立ち上げ、法人提携、KPI設計</li>
+                <li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li>
+              </ul></div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CIELO8 -->
-  <section id="cielo8" class="company pad-y">
-    <div class="wrap stack">
-      <div class="head">
-        <div class="logo">C8</div>
-        <div>
-          <h2>CIELO8（飲食・空間）</h2>
-          <p class="muted">飲食・空間装飾・植物レンタルなど、体験価値を設計するトータルカンパニー。</p>
+  <section class="section-inner">
+    <div class="about-sec cf right">
+      <div class="col col-d pd-r">
+        <div class="text">
+          <h2 class="serif">CIELO8（飲食・空間）</h2>
+          <h3>飲食・空間装飾・植物レンタル。体験価値を設計するトータルカンパニー。</h3>
+          <ul class="company-list">
+            <li class="list cf"><div class="tt">キッチン/サービス</div><div class="td"><ul><li>メニュー開発、ホール運営、仕入れ/衛生</li><li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li></ul></div></li>
+            <li class="list cf"><div class="tt">空間デザイン/施工管理</div><div class="td"><ul><li>設計、発注・工程管理、装花/植物レンタル</li><li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li></ul></div></li>
+            <li class="list cf"><div class="tt">店舗マネージャー</div><div class="td"><ul><li>売上/原価/人件費管理、人材育成、販促</li><li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li></ul></div></li>
+          </ul>
         </div>
       </div>
-      <div class="grid cols-3">
-        <article class="card position">
-          <div class="media"><img src="img/home/dinner_top_banner.jpg" alt="Chef"></div>
-          <div class="body">
-            <h3>キッチン / サービス</h3>
-            <div class="meta"><span class="badge">飲食</span><span class="badge">接客</span></div>
-            <ul class="list">
-              <li>メニュー開発、仕込み・提供、ホール運営</li>
-              <li>仕入れ・衛生管理、SNSでのプロモーション</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-        <article class="card position">
-          <div class="media"><img src="img/home/flower_top_banner.jpg" alt="Space"></div>
-          <div class="body">
-            <h3>空間デザイン / 施工管理</h3>
-            <div class="meta"><span class="badge">デザイン</span><span class="badge">施工</span></div>
-            <ul class="list">
-              <li>店舗/装飾のデザイン、発注・工程・品質管理</li>
-              <li>植物レンタル/装花のプランニング</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-        <article class="card position">
-          <div class="media"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="Mgr"></div>
-          <div class="body">
-            <h3>店舗マネージャー</h3>
-            <div class="meta"><span class="badge">数値管理</span><span class="badge">人材育成</span></div>
-            <ul class="list">
-              <li>売上/原価/人件費の管理と改善、チームビルド</li>
-              <li>販促企画、レビュー/CSの改善</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-      </div>
+      <div class="col col-h"><div class="img" style="background-image:url('img/home/dinner_top_banner.jpg')"></div></div>
     </div>
   </section>
 
   <!-- AI.FLOWER -->
-  <section id="ai-flower" class="company pad-y" style="background:var(--bg-alt)">
-    <div class="wrap stack">
-      <div class="head">
-        <div class="logo">AF</div>
-        <div>
-          <h2>AI.FLOWER（花・装飾）</h2>
-          <p class="muted">アート感覚の装花・装飾、ECでのフラワーギフト制作を行います。</p>
-        </div>
-      </div>
-      <div class="grid cols-3">
-        <article class="card position">
-          <div class="media"><img src="img/home/flower_top_banner.jpg" alt="Flowerist"></div>
-          <div class="body">
-            <h3>フローリスト</h3>
-            <div class="meta"><span class="badge">制作</span><span class="badge">装花</span></div>
-            <ul class="list">
-              <li>装花/ブーケ/イベント装飾の制作</li>
-              <li>写真撮影、EC掲載、配送手配</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-        <article class="card position">
-          <div class="media"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop" alt="EC"></div>
-          <div class="body">
-            <h3>EC運用 / 撮影</h3>
-            <div class="meta"><span class="badge">EC</span><span class="badge">撮影</span></div>
-            <ul class="list">
-              <li>商品撮影、レタッチ、商品ページ作成</li>
-              <li>SNS/広告運用のベース業務</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-      </div>
+  <section class="section-inner bg-lightgray">
+    <div class="about-sec cf">
+      <div class="col col-h pd-r"><div class="img" style="background-image:url('img/home/flower_top_banner.jpg')"></div></div>
+      <div class="col col-d"><div class="text">
+        <h2 class="serif">AI.FLOWER（花・装飾）</h2>
+        <h3>装花/装飾、EC運営を担うメンバーを募集。</h3>
+        <ul class="company-list">
+          <li class="list cf"><div class="tt">フローリスト</div><div class="td"><ul><li>装花/ブーケ制作、撮影、EC掲載</li><li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li></ul></div></li>
+          <li class="list cf"><div class="tt">EC運用/撮影</div><div class="td"><ul><li>商品撮影、レタッチ、商品ページ作成、SNS</li><li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li></ul></div></li>
+        </ul>
+      </div></div>
     </div>
   </section>
 
   <!-- Dentists -->
-  <section id="dentists" class="company pad-y">
-    <div class="wrap stack">
-      <div class="head">
-        <div class="logo">DL</div>
-        <div>
-          <h2>“歯の寿命をのばす会”（医療）</h2>
-          <p class="muted">予防歯科学の普及を目指すプロジェクト。メディア運営やイベント支援を中心に採用。</p>
-        </div>
-      </div>
-      <div class="grid cols-3">
-        <article class="card position">
-          <div class="media"><img src="img/home/dentist_top_banner.jpg" alt="Media"></div>
-          <div class="body">
-            <h3>編集 / ライター</h3>
-            <div class="meta"><span class="badge">編集</span><span class="badge">医療系歓迎</span></div>
-            <ul class="list">
-              <li>記事企画、取材/執筆、監修調整</li>
-              <li>SEO/構成、CMS入稿</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-        <article class="card position">
-          <div class="media"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop" alt="PM"></div>
-          <div class="body">
-            <h3>プロジェクトマネージャー</h3>
-            <div class="meta"><span class="badge">進行管理</span><span class="badge">渉外</span></div>
-            <ul class="list">
-              <li>イベント/タイアップの進行、予算/スケジュール管理</li>
-              <li>関係者調整、報告/効果測定</li>
-            </ul>
-            <div class="footer"><a class="btn" href="https://job.rikunabi.com/" target="_blank" rel="noopener">応募サイトへ</a></div>
-          </div>
-        </article>
-      </div>
+  <section class="section-inner">
+    <div class="about-sec cf right">
+      <div class="col col-d pd-r"><div class="text">
+        <h2 class="serif">“歯の寿命をのばす会”（医療）</h2>
+        <h3>予防歯科学の普及。メディア運営やイベント支援。</h3>
+        <ul class="company-list">
+          <li class="list cf"><div class="tt">編集/ライター</div><div class="td"><ul><li>記事企画、取材/執筆、監修調整、CMS</li><li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li></ul></div></li>
+          <li class="list cf"><div class="tt">プロジェクトマネージャー</div><div class="td"><ul><li>イベント進行、予算・スケジュール管理、渉外</li><li class="box-link"><a href="https://job.rikunabi.com/" target="_blank"><span>応募サイトへ<div class="arrow"><svg><use xlink:href="#icon-arrow"/></svg></div></span></a></li></ul></div></li>
+        </ul>
+      </div></div>
+      <div class="col col-h"><div class="img" style="background-image:url('img/home/dentist_top_banner.jpg')"></div></div>
     </div>
   </section>
 
-  <footer class="pad-y" style="background:#fff">
-    <div class="wrap">
-      <div class="copy">© <span id="year"></span> Commit Group</div>
+  <!-- ===== Footer（news.htmlと同構成） ===== -->
+  <footer id="contact">
+    <div class="section-inner">
+      <a href="#" class="logo salt"><svg><use xlink:href="#logo"></use></svg></a>
+      <div class="foot-bottom cf">
+        <ul class="info">
+          <li><a class="hajime" href="index.html"><div>HOME</div></a></li>
+          <li><a href="message.html"><div>MESSAGE</div></a></li>
+          <li><a href="company.html"><div>OUR COMPANY</div></a></li>
+          <li><a href="history.html"><div>OUR HISTORY</div></a></li>
+          <li><a href="projects.html"><div>PROJECTS</div></a></li>
+          <li><a href="news.html"><div>NEWS</div></a></li>
+          <li><a href="contact.html"><div>CONTACT</div></a></li>
+        </ul>
+      </div>
+      <div class="foot-bottom cf" style="margin-top:10px;">
+        <p class="copy">© <span id="year"></span> Commit Group</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+  // 年の自動更新
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== Splash =====
+  (function(){
+    const KEY='COMMIT_GROUP_SPLASH_SHOWN_DATE';
+    const splash=document.getElementById('splash');
+    if(!splash) return;
+    const qp=new URLSearchParams(location.search);
+    const force=qp.get('splash')==='1';
+    const d=new Date();
+    const today=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const last=localStorage.getItem(KEY);
+    const shouldShow=force||(last!==today);
+    if(!shouldShow){ splash.remove(); }
+    else{
+      document.body.classList.add('splash-on');
+      requestAnimationFrame(()=> splash.classList.add('is-in'));
+      const closeSplash=()=>{ splash.classList.add('is-out'); setTimeout(()=>{ document.body.classList.remove('splash-on'); splash.remove(); },600); };
+      window.addEventListener('load',()=> setTimeout(closeSplash,1600));
+      splash.addEventListener('click', closeSplash);
+      document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSplash(); });
+      try{ localStorage.setItem(KEY,today); }catch(_){}
+    }
+  })();
+
+  // ===== ナビ =====
+  function navInit(){
+    $('.nav-trigger').on('click',function(e){ $('body').toggleClass('show'); e.preventDefault(); });
+    if($(window).width()>940){
+      $('.drop').on('mouseenter',function(){ $(this).toggleClass('showdrop'); });
+      $('.drop').on('mouseleave',function(){ $(this).removeClass('showdrop'); });
+    }else{
+      $('.drop').on('click',function(){ $(this).toggleClass('showdrop'); });
+    }
+  }
+  $(function(){
+    navInit();
+    // スクロールアニメ（共通のrevealを利用）
+    const markReveal=(selector, perRow=3, stagger=80)=>{
+      const nodes=[...document.querySelectorAll(selector)];
+      nodes.forEach((el,i)=>{ el.classList.add('reveal'); el.style.transitionDelay=((i%perRow)*stagger/1000)+'s'; });
+    };
+    markReveal('.about-sec .col, .company-list .list');
+    const io=new IntersectionObserver((entries,obs)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+    },{threshold:.2});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+  });
+</script>
 </body>
 </html>
