@@ -1032,7 +1032,7 @@ input.wpcf7-not-valid,textarea.wpcf7-not-valid { border-bottom:1px solid #b44343
     .archives-sec .filter li a:hover { color:#A82424; }
     .archives-sec .col .text h4 { font-size: 13px; }
     .archives-sec .col a:hover .img img { -webkit-transform: scale3d(1.05,1.05,1.05); -moz-transform: scale3d(1.05,1.05,1.05); transform: scale3d(1.05,1.05,1.05); }
-    .archives-sec .col { width: 33.3333% }
+    /* .archives-sec .col { width: 33.3333% } */
     .archives-sec .col .text h3 { font-size: 18px; }
 }
 
