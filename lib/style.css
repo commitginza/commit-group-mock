@@ -2034,3 +2034,8 @@ body.modal-open{overflow:hidden;}
 
 .recruit-section { margin: 0 0 56px;max-width: none; }
 .section-wrap-contener {max-width: 1080px;margin: 5rem auto 0 auto;}
+@media (max-width:960px){
+    #recruit .container {
+        width:100%;    
+    }
+}
